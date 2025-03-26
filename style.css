@@ -2,63 +2,63 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  body {
+}
+
+body {
     font-family: Arial, sans-serif;
     background-color: lightgray;
     color: black;
     padding: 20px;
-  }
-  
-  h1 {
+    line-height: 1.6;
+}
+
+h1 {
     text-align: center;
     font-size: 2em;
     color: blue;
-  }
-  
-  #checkin-list, #checkin-form {
+}
+
+#checkin-list, #checkin-form {
     background-color: white;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
-  }
-  
-  #checkin-list ul {
+}
+
+#checkin-list ul {
     list-style-type: none;
-  }
-  
-  #checkin-list li {
+}
+
+#checkin-list li {
     padding: 10px 0;
     border-bottom: 1px solid gray;
-  }
-  
-  form {
+}
+
+form {
     display: flex;
     flex-direction: column;
     gap: 10px;
-  }
-  
-  input, select, textarea, button {
+}
+
+input, select, textarea, button {
     padding: 10px;
     border: 1px solid gray;
     border-radius: 5px;
-  }
-  
-  button {
+}
+
+button {
     background-color: blue;
     color: white;
     cursor: pointer;
-  }
-  
-  button:hover {
+}
+
+button:hover {
     background-color: darkblue;
-  }
-  
-  footer {
+}
+
+footer {
     text-align: center;
     margin-top: 20px;
     color: gray;
-  }
-  
+}
