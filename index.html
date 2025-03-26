@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mental Health Check-In App</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+
+  <h1>Mental Health Check-In</h1>
+
+  <div id="checkin-list">
+    <h2>Check-In History</h2>
+    <ul id="entries"></ul>
+  </div>
+
+  <div id="checkin-form">
+    <h2>Add a New Check-In</h2>
+    <form>
+      <p>Title:</p>
+      <input type="text" id="title" required>
+      
+      <p>Mood:</p>
+      <select id="mood" required>
+        <option>Happy</option>
+        <option>Sad</option>
+        <option>Anxious</option>
+        <option>Stressed</option>
+        <option>Relaxed</option>
+      </select>
+
+      <p>Description:</p>
+      <textarea id="description" required></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <p>&copy; 2025 Mental Health Check-In App</p>
+
+  <script src="app.js"></script>
+
+</body>
+</html>
