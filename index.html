@@ -10,11 +10,15 @@
 
   <h1>Mental Health Check-In</h1>
 
+  
   <section id="checkin-list">
     <h2>Check-In History</h2>
-    <ul id="entries"></ul>
+    <ul id="entries">
+      
+    </ul>
   </section>
 
+  <!-- Form for New Check-In -->
   <section id="checkin-form">
     <h2>Add a New Check-In</h2>
     <form id="new-checkin">
@@ -26,6 +30,16 @@
         <option value="Happy">Happy</option>
         <option value="Neutral">Neutral</option>
         <option value="Sad">Sad</option>
+        <option value="Anxious">Anxious</option>
+        <option value="Angry">Angry</option>
+        <option value="Calm">Calm</option>
+        <option value="Motivated">Motivated</option>
+        <option value="Stressed">Stressed</option>
+        <option value="Irritated">Irritated</option>
+        <option value="Depressed">Depressed</option>
+        <option value="Bored">Bored</option>
+        <option value="Lonely">Lonely</option>
+        <option value="Frustrated">Frustrated</option>
       </select>
       
       <label for="description">Description:</label>
@@ -35,9 +49,21 @@
     </form>
   </section>
 
+  
+  <section id="tips">
+    
+  </section>
+
+
   <footer>
     <p>&copy; 2025 Mental Health Check-In App</p>
   </footer>
+
+  
+  <div id="reminder-popup" class="reminder-popup" style="display:none;">
+    <p>Don't forget to check in!</p>
+    <button class="dismiss-btn" id="dismiss-btn">Dismiss</button>
+  </div>
 
   <script src="app.js"></script>
 </body>
