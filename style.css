@@ -18,13 +18,18 @@ h1 {
     color: blue;
 }
 
+
 #checkin-list, #checkin-form {
     background-color: white;
     padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
+
 
 #checkin-list ul {
     list-style-type: none;
@@ -32,7 +37,28 @@ h1 {
 
 #checkin-list li {
     padding: 10px 0;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid lightgray;
+    transition: background-color 0.3s ease;
+}
+
+#checkin-list li:hover {
+    background-color: #f9f9f9; 
+}
+
+
+.entry-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.mood-label {
+    background-color: lightblue;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
 }
 
 form {
@@ -41,24 +67,88 @@ form {
     gap: 10px;
 }
 
+
 input, select, textarea, button {
-    padding: 10px;
+    padding: 12px; 
     border: 1px solid gray;
-    border-radius: 5px;
+    border-radius: 8px; 
 }
+
+textarea {
+    resize: vertical; 
+}
+
 
 button {
     background-color: blue;
     color: white;
     cursor: pointer;
+    border: none; 
+    border-radius: 8px; 
+    font-size: 1em;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
     background-color: darkblue;
 }
 
+
+.reminder-popup {
+    background-color: yellow;
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.5s ease;
+}
+
+.dismiss-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: fixed;
+    bottom: 10px;
+    right: 120px;
+}
+
+.dismiss-btn:hover {
+    background-color: darkred;
+}
+
+
+#tips {
+    margin-top: 20px;
+    background-color: #f0f8ff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 1em;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+
 footer {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 40px;
     color: gray;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
