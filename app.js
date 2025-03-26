@@ -32,3 +32,17 @@ document.addEventListener('DOMContentLoaded', function () {
         showEntries(); // Update the list with new entry
     });
 });
+
+let reminderInterval = setInterval(() => {
+    alert("Reminder: Please check in to track your emotional well-being!");
+}, 30000); // 30 seconds (adjust for longer intervals)
+
+// Optional: Button to stop the reminder
+const stopReminderBtn = document.createElement('button');
+stopReminderBtn.textContent = "Dismiss Reminder";
+document.body.appendChild(stopReminderBtn);
+
+stopReminderBtn.addEventListener('click', () => {
+    clearInterval(reminderInterval);
+    alert("Reminders stopped.");
+});
