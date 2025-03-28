@@ -1,21 +1,34 @@
 document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('new-checkin');
     const entriesList = document.getElementById('entries');
+    const landingPage = document.getElementById('landing-page');
+    const mainContent = document.getElementById('main-content');
+    const startCheckinButton = document.getElementById('start-checkin');
     const tipsSection = document.createElement('div');
     tipsSection.id = 'tips';
     document.body.insertBefore(tipsSection, document.querySelector('footer'));
     let checkinEntries = [];
 
+    // Show main content and hide landing page
+    startCheckinButton.addEventListener('click', function () {
+        landingPage.style.display = 'none';
+        mainContent.style.display = 'block';
+    });
+
     // Fetch motivational quotes from ZenQuotes API
     fetch('https://zenquotes.io/api/quotes')
         .then(response => response.json())
         .then(data => {
-            checkinEntries = data;
+            checkinEntries = data.map(entry => ({
+                title: "Quote",
+                mood: entry.a,
+                description: entry.q
+            }));
             showEntries(); // Display fetched quotes as check-in entries
         })
         .catch(error => console.error('Error fetching data:', error));
 
-    // Function to display entries (quotes)
+    // Function to display entries (quotes and user check-ins)
     function showEntries() {
         entriesList.innerHTML = '';
         checkinEntries.forEach(function (entry) {
@@ -23,8 +36,9 @@ document.addEventListener('DOMContentLoaded', function () {
             listItem.classList.add('checkin-item');
             listItem.innerHTML = `
                 <div class="entry-header">
-                    <h3>${entry.q}</h3> <!-- Display quote text -->
-                    <span class="mood-label">${entry.a}</span> <!-- Display author of the quote -->
+                    <h3>${entry.title}</h3>
+                    <span class="mood-label">${entry.mood}</span>
+                    <p>${entry.description}</p>
                 </div>
             `;
             entriesList.appendChild(listItem);
