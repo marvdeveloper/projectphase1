@@ -6,6 +6,13 @@ document.addEventListener('DOMContentLoaded', function () {
     document.body.insertBefore(tipsSection, document.querySelector('footer'));
     let checkinEntries = [];
 
+    fetch('https://fakestoreapi.com/products')
+        .then(response => response.json())
+        .then(data => {
+            checkinEntries = data;
+            showEntries(); // Display fetched entries
+        })
+        .catch(error => console.error('Error fetching data:', error));
     
     function showEntries() {
         entriesList.innerHTML = ''; 
