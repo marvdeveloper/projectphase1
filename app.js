@@ -4,9 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const landingPage = document.getElementById('landing-page');
     const mainContent = document.getElementById('main-content');
     const startCheckinButton = document.getElementById('start-checkin');
-    const tipsSection = document.createElement('div');
-    tipsSection.id = 'tips';
-    document.body.insertBefore(tipsSection, document.querySelector('footer'));
+    const tipsSection = document.getElementById('tips');
     let checkinEntries = [];
 
     // Show main content and hide landing page
