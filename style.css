@@ -41,3 +41,15 @@
 #main-content {
     display: none; /* Initially hidden */
 }
+
+/* Reminder Popup Styling */
+.reminder-popup {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: lightyellow;
+    border: 1px solid lightgray;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
