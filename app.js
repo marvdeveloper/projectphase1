@@ -13,9 +13,10 @@ document.addEventListener('DOMContentLoaded', function () {
     startCheckinButton.addEventListener('click', function () {
         landingPage.style.display = 'none';
         mainContent.style.display = 'block';
+        fetchQuote();  // Fetch a new quote when starting check-in
     });
 
-    // Fetch a quote from ZenQuotes API
+    // Fetch a random quote from ZenQuotes API
     async function fetchQuote() {
         try {
             const response = await fetch('https://zenquotes.io/api/random');
@@ -30,9 +31,6 @@ document.addEventListener('DOMContentLoaded', function () {
             quoteAuthor.textContent = '';
         }
     }
-
-    // Call fetchQuote when the page loads
-    fetchQuote();
 
     // Hardcoded self-care tips for different moods
     const selfCareTips = {
@@ -93,6 +91,7 @@ document.addEventListener('DOMContentLoaded', function () {
         form.reset();
         showEntries();
         fetchSelfCareTips(mood);  // Fetch personalized tip based on mood after check-in submission
+        fetchQuote();  // Fetch a new random quote after check-in submission
     });
 
     // Reminder section
